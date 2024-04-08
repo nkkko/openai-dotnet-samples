@@ -29,12 +29,12 @@ Collection of OpenAI samples written in .NET. Similar to the [OpenAI website sam
         
         - `AOAI_ENDPOINT` - The endpoint for your **Azure OpenAI Service** resource.
         - `AOAI_KEY` - The access key for your **Azure OpenAI Service** resource.
-        - `AOAI_DEPLOYMENTID` - The name of your model deployment (`davinci-003-deployment`).
+        - `AOAI_DEPLOYMENTID` - The name of your model deployment (`gpt-35-turbo-instruct-deployment`).
     
         **OpenAI**
 
         - `AOAI_KEY` - The API key for your **OpenAI** account. For more details on getting your API keys, see the [OpenAI documentation](https://platform.openai.com/docs/guides/production-best-practices/api-keys). 
-        - `AOAI_DEPLOYMENTID` - The model name (i.e. `text-davinci-003`). For more details on models, see [OpenAI model](https://platform.openai.com/docs/models/gpt-3-5) documentation.
+        - `AOAI_DEPLOYMENTID` - The model name (i.e. `gpt-35-turbo-instruct`). For more details on models, see [OpenAI model](https://platform.openai.com/docs/models/gpt-3-5) documentation.
     1. Save your changes
 
 1. Rebuild the container
@@ -52,7 +52,7 @@ The following are things to be mindful of when using the Azure .NET SDK with eac
 
 #### Deployment ID
 
-Deployments are a way to provide a user-friendly name for OpenAI models. These deployments are backed by OpenAI models such as *text-davinci-003*. When using the Azure OpenAI .NET SDK, your Deployment ID is the name you provided to your deployment, not the name of the OpenAI model.
+Deployments are a way to provide a user-friendly name for OpenAI models. These deployments are backed by OpenAI models such as *gpt-35-turbo-instruct*. When using the Azure OpenAI .NET SDK, your Deployment ID is the name you provided to your deployment, not the name of the OpenAI model.
 
 For more details, see the [deploy a model](https://learn.microsoft.com/azure/cognitive-services/openai/how-to/create-resource?pivots=web-portal#deploy-a-model) documentation.
 
@@ -69,7 +69,7 @@ var openAIClient = new OpenAIClient(AOAI_KEY);
 
 #### Deployment ID
 
-Unlike Azure OpenAI Service, OpenAI doesn't use deployments. Instead, it uses the model names. The value of your `AOAI_DEPLOYMENTID` environment variable should be the name of the OpenAI model. For almost all of these samples, the model used is `text-davinci-003`. For ChatGPT samples use `gpt-35-turbo`.
+Unlike Azure OpenAI Service, OpenAI doesn't use deployments. Instead, it uses the model names. The value of your `AOAI_DEPLOYMENTID` environment variable should be the name of the OpenAI model. For almost all of these samples, the model used is `gpt-35-turbo-instruct`. For chat samples use `gpt-35-turbo`.
 
 ## Settings
 
